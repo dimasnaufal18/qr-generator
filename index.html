@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Library QR Code -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>📱 QR Code Generator</h1>
+            <p>Bikin QR Code dari teks, link, atau apapun. Gratis & langsung jadi.</p>
+        </header>
+
+        <!-- Form Input -->
+        <div class="card">
+            <label for="text-input">Masukkan Teks atau URL</label>
+            <textarea
+                id="text-input"
+                placeholder="Contoh: https://github.com/dimasnaufal18 atau Halo Dunia!"
+                rows="4"
+            ></textarea>
+
+            <!-- Settings -->
+            <div class="settings">
+                <div class="setting-item">
+                    <label for="size-select">Ukuran</label>
+                    <select id="size-select">
+                        <option value="200">Kecil (200x200)</option>
+                        <option value="300" selected>Sedang (300x300)</option>
+                        <option value="400">Besar (400x400)</option>
+                        <option value="500">Sangat Besar (500x500)</option>
+                    </select>
+                </div>
+
+                <div class="setting-item">
+                    <label for="color-dark">Warna QR</label>
+                    <input type="color" id="color-dark" value="#000000">
+                </div>
+
+                <div class="setting-item">
+                    <label for="color-light">Warna Background</label>
+                    <input type="color" id="color-light" value="#ffffff">
+                </div>
+            </div>
+
+            <!-- Tombol -->
+            <div class="buttons">
+                <button id="generate-btn" class="btn btn-primary">
+                    ✨ Generate QR
+                </button>
+                <button id="download-btn" class="btn btn-success" disabled>
+                    ⬇️ Download PNG
+                </button>
+                <button id="reset-btn" class="btn btn-secondary">
+                    🔄 Reset
+                </button>
+            </div>
+        </div>
+
+        <!-- Hasil QR -->
+        <div class="result" id="result" style="display: none;">
+            <h3>Hasil QR Code</h3>
+            <div class="qr-container">
+                <canvas id="qr-canvas"></canvas>
+            </div>
+            <p class="info">Scan QR Code ini dengan kamera HP kamu.</p>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2026 Mhd Dimas Naufal. All rights reserved</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
