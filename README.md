@@ -181,19 +181,11 @@ qr-generator/
 
 ## Live Demo
 
-Project ini dapat dijalankan langsung melalui browser setelah repository dipublikasikan menggunakan GitHub Pages atau layanan hosting statis lainnya.
+Project ini dapat dijalankan langsung melalui browser.
 
 **Live Demo:**
 
-> Belum tersedia. Setelah project di-deploy, tambahkan URL Live Demo di bagian ini.
-
-Contoh:
-
-```text
-https://dimasnaufal18.github.io/qr-generator/
-```
-
-Jika menggunakan **GitHub Pages**, pastikan file `index.html` berada pada lokasi yang sesuai dan Pages telah diaktifkan pada repository.
+> https://qr-generator-web-ecru.vercel.app
 
 ---
 
